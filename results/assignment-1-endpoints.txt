@@ -1,0 +1,21 @@
+=== Lambda ZIP ===
+{
+    "StatusCode": 200,
+    "ExecutedVersion": "$LATEST"
+}
+{"statusCode": 200, "headers": {"Content-Type": "application/json", "X-Server-Time-Ms": "68.082", "X-Instance-Id": "2026/03/29/[$LATEST]75b147c9c5eb447fbe5039f4ff119de2", "X-Cold-Start": "false"}, "body": "{\"results\": [{\"index\": 35859, \"distance\": 12.001459121704102}, {\"index\": 24682, \"distance\": 12.059946060180664}, {\"index\": 35397, \"distance\": 12.487079620361328}, {\"index\": 20160, \"distance\": 12.489519119262695}, {\"index\": 30454, \"distance\": 12.499402046203613}], \"query_time_ms\": 68.082, \"instance_id\": \"2026/03/29/[$LATEST]75b147c9c5eb447fbe5039f4ff119de2\", \"cold_start\": false}"}
+=== Lambda Container ===
+{
+    "StatusCode": 200,
+    "ExecutedVersion": "$LATEST"
+}
+{"statusCode": 200, "headers": {"Content-Type": "application/json", "X-Server-Time-Ms": "57.014", "X-Instance-Id": "2026/03/29/[$LATEST]4fb961be8a68497b86c9ad6fd3693066", "X-Cold-Start": "false"}, "body": "{\"results\": [{\"index\": 35859, \"distance\": 12.001459121704102}, {\"index\": 24682, \"distance\": 12.059946060180664}, {\"index\": 35397, \"distance\": 12.487079620361328}, {\"index\": 20160, \"distance\": 12.489519119262695}, {\"index\": 30454, \"distance\": 12.499402046203613}], \"query_time_ms\": 57.014, \"instance_id\": \"2026/03/29/[$LATEST]4fb961be8a68497b86c9ad6fd3693066\", \"cold_start\": false}"}
+=== Fargate ===
+http://lsc-knn-alb-563126159.us-east-1.elb.amazonaws.com/search
+{"instance_id":"ip-172-31-2-229.ec2.internal","query_time_ms":23.53,"results":[{"distance":12.001459121704102,"index":35859},{"distance":12.059946060180664,"index":24682},{"distance":12.487079620361328,"index":35397},{"distance":12.489519119262695,"index":20160},{"distance":12.499402046203613,"index":30454}]}
+
+
+=== EC2 ===
+http://98.93.62.15:8080/search
+{"instance_id":"0a3a92aa2afb","query_time_ms":28.111,"results":[{"distance":12.001459121704102,"index":35859},{"distance":12.059946060180664,"index":24682},{"distance":12.487079620361328,"index":35397},{"distance":12.489519119262695,"index":20160},{"distance":12.499402046203613,"index":30454}]}
+
